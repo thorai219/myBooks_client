@@ -1,0 +1,13 @@
+.form-container {
+  width: 400px;
+}
+
+.auth-action {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+}
+
+.auth-action p {
+  margin: 0;
+}
