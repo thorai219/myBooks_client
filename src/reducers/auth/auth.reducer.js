@@ -1,10 +1,10 @@
 import { AUTH, SIGN_OUT } from "./auth.types";
 
-export default (state = { authData: null }, action) => {
+export const auth = (state = null, action) => {
   switch (action.type) {
     case AUTH:
-      localStorage.setItem("profile", JSON.stringify({ ...action.payload }));
-      return { ...state, authData: action.payload };
+      localStorage.setItem("profile", JSON.stringify({ ...action.data }));
+      return { ...state, authData: action.data };
 
     case SIGN_OUT:
       localStorage.clear();

@@ -93,17 +93,23 @@ const AuthForm = () => {
             />
           ) : null}
         </div>
-        <button className="btn btn-success">Submit</button>
+        <div className="btn-container">
+          <button className="btn btn-success">Submit</button>
+        </div>
         <div className="auth-action">
-          {signUp ? (
+          {userSignUp ? (
             <p>
               Already have an account?{" "}
-              <span onClick={handleAuthChange}>sign in here</span>
+              <span className="auth-action-btn" onClick={handleAuthChange}>
+                sign in here
+              </span>
             </p>
           ) : (
             <p>
-              Dont'have an account?{" "}
-              <span onClick={handleAuthChange}>sign up here</span>
+              Don't have an account?{" "}
+              <span className="auth-action-btn" onClick={handleAuthChange}>
+                sign up here
+              </span>
             </p>
           )}
         </div>

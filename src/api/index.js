@@ -13,5 +13,5 @@ API.interceptors.request.use((req) => {
 
 export const signIn = (data) => API.post("/auth/signin", data);
 export const signUp = (data) => API.post("/auth/signup", data);
-export const fetchNewReleases = () => API.post("/books/new");
+export const fetchNewReleases = () => API.get("/books/new");
 export const fetchBooksByQuery = (data) => API.post("/books/search", data);

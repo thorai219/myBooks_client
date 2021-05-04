@@ -5,7 +5,7 @@ export const signIn = (userData, history) => async (dispatch) => {
   try {
     const { data } = await API.signIn(userData);
 
-    dispatch({ type: AUTH, payload: data });
+    dispatch({ type: AUTH, data });
 
     history.push("/");
   } catch (e) {
@@ -17,10 +17,10 @@ export const signUp = (userData, history) => async (dispatch) => {
   try {
     const { data } = await API.signUp(userData);
 
-    dispatch({ type: AUTH, payload: data });
+    dispatch({ type: AUTH, data });
 
     history.push("/");
   } catch (e) {
-    console.log(e);
+    console.log(e.message);
   }
 };
