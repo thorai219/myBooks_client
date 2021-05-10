@@ -8,16 +8,21 @@ const BooksList = () => {
 
   return (
     <div className="container">
-      <h1>Book list</h1>
-      <div className="books-container">
+      <div className="row">
         {books &&
           books.new.books.map((book) => (
-            <div className="book-container" key={book.isbn13}>
-              <div className="book-cover-container">
-                <img src={book.image} alt="book cover images" />
+            <div className="col book-container" key={book.isbn13}>
+              <div>
+                <img
+                  src={book.image}
+                  alt="book cover images"
+                  style={{
+                    width: "200px",
+                  }}
+                />
               </div>
-              <div className="book-information">
-                <h2>{book.title}</h2>
+              <div>
+                <p>{book.title}</p>
                 <p>{book.price}</p>
               </div>
             </div>
